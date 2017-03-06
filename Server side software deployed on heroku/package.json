@@ -1,0 +1,22 @@
+{
+  "name": "tnstc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "delete.js",
+   "dependencies": {
+	"express": "4.x",
+	"mongodb": "^2.2.4",
+	"body-parser": "~1.10.1"
+    },
+  "devDependencies": {},
+    "scripts": {
+	"start": "node test.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+      "node": "7.6.0",
+      "npm" : "4.1.2"
+  },
+  "author": "",
+  "license": "ISC"
+}
