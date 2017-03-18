@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v){
                 RequestQueue MyRequestQueue = Volley.newRequestQueue(getApplicationContext());
                 String url = "https://infinite-caverns-16309.herokuapp.com/getLocation";
-                /* StringRequest MyStringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
+                 StringRequest MyStringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
                         //This code is executed if the server responds, whether or not the response contains data.
@@ -58,24 +58,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 };
                 MyRequestQueue.add(MyStringRequest);
-            */
-
-                HashMap<String, String> MyData = new HashMap<>();
-                MyData.put("routeNo", "17D");
-                JsonObjectRequest req = new JsonObjectRequest(url, new JSONObject(MyData),
-                        new Response.Listener<JSONObject>() {
-                            @Override
-                            public void onResponse(JSONObject response) {
-                                //VolleyLog.v("Response:%n %s", response.toString(4));
-                                Toast.makeText(MainActivity.this,"Naruto Uzamaki!",Toast.LENGTH_SHORT).show();
-                            }
-                        }, new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(MainActivity.this,"Sasuke Uchiha",Toast.LENGTH_SHORT).show();
-                    }
-                });
-                MyRequestQueue.add(req);
+       
             }
         });
     }
