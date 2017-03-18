@@ -74,14 +74,14 @@ app.post("/currentStop",function (req, res){
 });
 app.post("/getLocation",function (req, res){
     console.log("Welcome Master Wizard Ganesh to the update currentStop service");
-    res.writeHead(200, {"Content-Type": "application/json"});
+    // res.writeHead(200, {"Content-Type": "application/json"});
     MongoClient.connect(url, function(err, db){
-    routeNo = req.body.routeNo;
-    db.collection('BusInfo').findOne({"RouteNo" : routeNo}, (function(err, docs){
-          latitude= docs.Latitude;
-        });
-    });
-    res.json({ "Latitude": latitude });
-    res.end();
+    //routeNo = req.body.routeNo;
+    //db.collection('BusInfo').findOne({"RouteNo" : routeNo}, (function(err, docs){
+      //    latitude= docs.Latitude;
+       // });
+   // });
+    //res.json({ "Latitude": latitude });
+    res.send("Latitude: 33.1234");
 });
 app.listen(process.env.PORT || 5000);
